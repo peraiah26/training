@@ -4,5 +4,5 @@
   tasks:
   - name: copy the files
     ansible.builtin.copy:
-      src: /home/ec2-user/periah.yaml
+      src: /home/ec2-user/print
       dest: /home/ec2-user
