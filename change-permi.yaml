@@ -1,5 +1,6 @@
 - name: change file permissions
-  hosts: frontend
+  hosts: local
+  connection: local
   become: yes
   tasks: 
   - name: change file permissions
