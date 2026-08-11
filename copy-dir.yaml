@@ -4,5 +4,5 @@
   tasks:
   - name: copy the files
     ansible.builtin.copy:
-      src: /home/ec2-user/lasd
+      src: /home/ec2-user/lsad
       dest: /home/ec2-user
