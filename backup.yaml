@@ -1,0 +1,9 @@
+- name: backup files 
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: backup
+    ansible.builtin.copy:
+      src: /home/ec2-user/training/inventory.ini
+      dest: /home/ec2-user/dir/mills
+      backup: yes
