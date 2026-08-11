@@ -1,0 +1,8 @@
+- name: copy files one place to another place
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: copy the files
+    ansible.builtin.copy:
+      src: /home/ec2-user/lasd
+      dest: /home/ec2-user
