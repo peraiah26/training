@@ -8,5 +8,5 @@
       src: copy.yaml
       dest: /home/ec2-user/training/copy.yaml
       mode: 0655
-      owenr: peraiah
+      owner: peraiah
       group: peraiah
