@@ -1,0 +1,9 @@
+- name: change file permissions
+  hosts: frontend
+  become: yes
+  tasks: 
+  - name: change file permissions
+    ansible.builtin.copy:
+      src: copy.yaml
+      dest: /home/ec2-user/training/copy.yaml
+      mode: 0655
