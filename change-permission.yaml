@@ -1,0 +1,8 @@
+- name: change the file permissions 
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: permissions
+    ansible.builtin.file:
+      path: /home/ec2-user/achive
+      mode: '0633'
