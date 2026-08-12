@@ -1,8 +1,8 @@
 #/bin/bash
 
-name="peraiah"
+name=10
 
-if [ $name -eq peraiah ]; then
+if [ $name -eq 10 ]; then
 
     echo "raj"
 else
