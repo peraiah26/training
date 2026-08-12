@@ -1,0 +1,9 @@
+- name: creating link file
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: link
+    ansible.builtin.file:
+      src: /home/ec2-user/training/copy.yaml
+      dest: /home/ec2-user/share/copy.yaml.slink
+      state: link
