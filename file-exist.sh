@@ -1,6 +1,6 @@
 #/bin/bash
 
-if [ -e "copy.yaml" ];
+if [ -e "/home/ec2-user/print" ];
 then
     echo "file exists"
 else
