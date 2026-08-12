@@ -1,0 +1,8 @@
+- name: creating file using ansible
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: file
+    ansible.builtin.file:
+      path: /home/ec2-user/achive
+      state: touch
