@@ -6,3 +6,5 @@
     ansible.builtin.file:
       path: /home/ec2-user/achive
       mode: '0633'
+      owner: peraiah
+      group: peraiah
