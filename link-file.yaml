@@ -5,5 +5,5 @@
   - name: link
     ansible.builtin.file:
       src: /home/ec2-user/training/copy.yaml
-      dest: /home/ec2-user/share/copy.yaml.slink
+      dest: /home/ec2-user/copy.yaml
       state: link
