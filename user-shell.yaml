@@ -1,0 +1,10 @@
+- name: creating user 
+  hosts: local
+  become: yes
+  tasks:
+  - name: user
+    ansible.builtin.user:
+      name: noor
+      home: /home/sk
+      shell: /bin
+      
