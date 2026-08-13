@@ -1,6 +1,6 @@
 #/bin/bash
 
-if [ -f "copy.yaml" ];
+if [ -f "copy" ];
 then
     echo " it is a regular file "
 else
