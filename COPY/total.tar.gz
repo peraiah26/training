@@ -1,0 +1,1 @@
+tar -cvzf total.tar.bz index.html images/
