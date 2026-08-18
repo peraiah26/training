@@ -1,0 +1,12 @@
+- name: use registry to display date
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: display date using date command
+    ansible.builtin.command: date
+    register: today_date
+
+  - name: display today date
+    ansible.builtin.debug:
+      var: today_date.stdout
