@@ -1,0 +1,14 @@
+- name: display disk size
+  hosts: local
+  connection: local
+  become: yes
+
+  tasks:
+  - name: display disk
+    ansible.builtin.command: df -h /
+    register: disk
+
+  - name: display disk high
+    ansible.builtin.debug:
+      msg: "disk is high"
+    when: " '80%' in disk.stdout "
