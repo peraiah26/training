@@ -6,8 +6,8 @@
   tasks:
   - name: command
     ansible.builtin.command:
-    command: df -h
-    register: disk_size
+      command: df -h
+      register: disk_size
 
   - name: check disk disk size 
     ansible.builtin.debug:
