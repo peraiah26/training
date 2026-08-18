@@ -10,5 +10,5 @@
       register: disk_size
 
   - name: check disk disk size 
-    ansible.builtin.debud:
+    ansible.builtin.debug:
       variable: disk_size
