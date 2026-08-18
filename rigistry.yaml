@@ -2,9 +2,13 @@
   hosts: local
   connection: local
   become: yes
-  command: df -h
-  registry: disk_size
+  
   tasks:
+  - name: command
+    ansible.builtin.command:
+      command: df -h 
+      register: disk_size
+
   - name: check disk disk size 
     ansible.builtin.debud:
       variable: disk_size
