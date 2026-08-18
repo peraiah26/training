@@ -12,4 +12,4 @@
     - name: Display disk high
       ansible.builtin.debug:
         msg: "Disk is high"
-      when: disk.stdout | int > 70
+      when: disk.stdout.replace('%', '') | int > 70
