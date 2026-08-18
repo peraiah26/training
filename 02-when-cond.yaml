@@ -1,14 +1,15 @@
-- name: display disk size
+- name: Display disk size
   hosts: local
   connection: local
   become: yes
 
   tasks:
-  - name: display disk
-    ansible.builtin.command: df -h /var
-    register: disk
+    - name: Check /var disk usage
+      ansible.builtin.shell: df -h /var | awk 'NR==2 {print $5}'
+      register: disk
+      changed_when: false
 
-  - name: display disk high
-    ansible.builtin.debug:
-      msg: "disk is high"
-    when: " '70%' in disk.stdout "
+    - name: Display disk high
+      ansible.builtin.debug:
+        msg: "Disk is high"
+      when: disk.stdout | int > 70
