@@ -10,4 +10,4 @@
 
   - name: check disk disk size 
     ansible.builtin.debug:
-      var: disk_size
+      var: disk_size.stdout
