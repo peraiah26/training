@@ -5,10 +5,10 @@
 
   tasks:
   - name: display disk
-    ansible.builtin.command: df -h /
+    ansible.builtin.command: df -h /var
     register: disk
 
   - name: display disk high
     ansible.builtin.debug:
       msg: "disk is high"
-    when: " '80%' in disk.stdout "
+    when: " '70%' in disk.stdout "
