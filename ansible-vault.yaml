@@ -1,0 +1,10 @@
+- name: ansible-vault 
+  hosts: local
+  connection: local
+  become: yes
+  vars_files:
+    - secrate.yaml
+  tasks:
+  - name: ansible_vault
+    ansible.builtin.debug:
+      msg: "Username is {{ user }}"
