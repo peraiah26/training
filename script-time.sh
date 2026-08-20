@@ -1,9 +1,9 @@
 #!/bin/bash
 
-start-time=$(date +%S)
+start_time=$(date +%s)
 sleep 10
-end-time=$(date +%S)
+end_time=$(date +%s)
 
-total-time=($($start-time-$end-time))
+total_time=($($end_time-$start_time))
 
-echo "script executed time is: $total-time"
+echo "script executed time is: $total_time"
