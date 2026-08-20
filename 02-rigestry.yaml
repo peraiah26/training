@@ -9,4 +9,4 @@
 
   - name: display the register outpu
     ansible.builtin.debug:
-      var: memory_size.stdout
+      var: memory_size
