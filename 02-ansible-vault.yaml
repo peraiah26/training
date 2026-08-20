@@ -6,5 +6,5 @@
     - 01-secratefile
   tasks:
   - name: ansible-vault
-    ansible.builtin.debud:
+    ansible.builtin.debug:
       msg: "user name is: {{ USER }}, Passwd is: {{ PASSWD }}"
