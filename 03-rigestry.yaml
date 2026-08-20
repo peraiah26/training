@@ -1,0 +1,12 @@
+- name: registry concept
+  hosts: local 
+  conncetion: local
+  become: yes
+  tasks:
+  - name: register
+    ansible.builtin.command: hostname
+    register: server_name
+
+  - name: display hostname
+    ansible.builtin.debug:
+      msg: "Hostname is {{ server_name.stdout }}"
