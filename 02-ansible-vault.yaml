@@ -7,4 +7,4 @@
   tasks:
   - name: ansible-vault
     ansible.builtin.debug:
-      msg: "user name is: {{ USER }}, Passwd is: {{ PASSWD }}"
+      msg: "user name is: {{ user }}, Passwd is: {{ passwd }}"
