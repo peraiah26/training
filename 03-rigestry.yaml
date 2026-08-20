@@ -1,6 +1,6 @@
 - name: ansible register concept
   hosts: local 
-  conncetion: local
+  connection: local
   become: yes
   tasks:
   - name: register
