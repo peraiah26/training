@@ -1,0 +1,10 @@
+- name: ansible-vault
+  hosts: local
+  connection: local
+  become: yes
+  vars_files:
+    - 01-data
+  tasks:
+  - name: ansible_vault display
+    ansible.builtin.debug:
+      msg: " user name is: {{ admin }}, password is: {{ passwd }}"
