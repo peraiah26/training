@@ -1,0 +1,12 @@
+- name: display the out put using registry 
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: registry
+    ansible.builtin.command: free -h 
+    register: memory_size
+
+  - name: display the register outpu
+    ansible.builtin.debug:
+      var: memory_size.stdout
