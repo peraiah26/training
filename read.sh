@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "PLEASE ENTER YOUR NAME:"
+echo -n "PLEASE ENTER YOUR NAME:"
 read name
 
-echo "PLEASE ENTER YOUR PASSWORD: "
+echo -n "PLEASE ENTER YOUR PASSWORD: "
 read -s password
 
 echo "YOUR NAME IS: $name"
