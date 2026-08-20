@@ -2,9 +2,9 @@
   hosts: local
   connection: yes
   become: yes
-  var_files:
+  vars_files:
     - 01-secratefile
   tasks:
   - name: ansible-vault
     ansible.builtin.debud:
-    msg: "user name is: {{ $USER }}, Passwd is: {{ $PASSWD }}"
+      msg: "user name is: {{ USER }}, Passwd is: {{ PASSWD }}"
