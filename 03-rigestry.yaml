@@ -1,4 +1,4 @@
-- name: registry concept
+- name: ansible register concept
   hosts: local 
   conncetion: local
   become: yes
